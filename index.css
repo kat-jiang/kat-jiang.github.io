@@ -27,6 +27,7 @@ section {
 
 #navbar a {
   text-transform: uppercase;
+  letter-spacing: 2px;
   color: var(--base-color-light);
   text-decoration: none;
 }
@@ -111,5 +112,5 @@ h2 {
 }
 
 p {
-  font-size: 24px;
+  font-size: 18px;
 }
