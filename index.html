@@ -26,9 +26,6 @@
     <!-- My style sheets -->
     <link href="index.css" rel="stylesheet">
 
-    <!-- JavaScript Bundle with Popper -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
-
     <!-- Block title -->
     <title>
       Kat Jiang: Software Engineer
@@ -44,7 +41,7 @@
           <!-- <a href="#experience">Experience</a> -->
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
-          <a href="">Resume</a>
+          <a href="assets/Katherine Jiang Resume.pdf" target="_blank">Resume</a>
         </div>
       </div>
     </nav>
@@ -159,10 +156,9 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
-      <h3>Tools</h3>
       </div>
     </section>
-    <section id="projects" class="projects-section">
+    <section id="projects" class="project-section">
       <div class="container">
         <h2>Projects</h2>
         <div class="row">
@@ -172,15 +168,17 @@
             </div>
           </div>
           <div class="col-lg-4 col-text">
-            <h3 class="project-title">Travelbugs</h3>
-            <p>A fullstack collaborative travel app that allows users to interact and plan trips with their friends. Users can create a trip, invite their friends and start building the itinerary together. Users can explore the local area for activities, assign tasks to each other and create polls for their friends to vote on.</p>
-            <!-- <div>
-              <strong>Technologies Used:</strong><br>
-              Python, Flask, Javascript, React, HTML, CSS, PostgreSQL, SQLAlchemy, Chart.js, Mapbox API, Yelp Fusion API, Sendgrid API
-            </div> -->
-            <div class="project-links">
-              <a href="https://github.com/kat-jiang/Travel-planning-project" target="_blank" class="link">Github</a>
-              <a href="http://3.91.159.152/" target="_blank" class="link">Project Site</a>
+            <div class="col-v-center">
+              <h3 class="project-title">Travelbugs</h3>
+              <p>A fullstack collaborative travel app that allows users to interact and plan trips with their friends. Users can create a trip, invite their friends and start building the itinerary together. Users can explore the local area for activities, assign tasks to each other and create polls for their friends to vote on.</p>
+              <!-- <div>
+                <strong>Technologies Used:</strong><br>
+                Python, Flask, Javascript, React, HTML, CSS, PostgreSQL, SQLAlchemy, Chart.js, Mapbox API, Yelp Fusion API, Sendgrid API
+              </div> -->
+              <div class="project-links">
+                <a href="https://github.com/kat-jiang/Travel-planning-project" target="_blank" class="link">Github</a>
+                <a href="http://3.91.159.152/" target="_blank" class="link">Project Site</a>
+              </div>
             </div>
           </div>
         </div>
@@ -191,7 +189,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".swiper", {
-        slidesPerView: 5,
+        slidesPerView: 3,
         // spaceBetween: 5,
         allowTouchMove: false,
         pagination: {
@@ -200,16 +198,23 @@
         },
         loop: true,
         navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+        // when window width is >= 768px
+          768: {
+              slidesPerView: 5,
+              // spaceBetweenSlides: 30
+          }
+        }
       });
     </script>
 
   </body>
   <footer>
     <div>
-      <span>©</span> 2022 Katherine Jiang
+      <span>©</span> Katherine Jiang 2022
     </div>
     <div class="footer-contact">
       <a href="https://www.linkedin.com/in/jiangkatherine/" target="_blank"><i class="bi bi-linkedin"></i></a>

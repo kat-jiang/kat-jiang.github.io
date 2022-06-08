@@ -26,10 +26,10 @@ h1 {
 }
 
 h2 {
-  font-size: 52px;
+  font-size: 56px;
   letter-spacing: 1px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: inline-flex;
   position: relative;
   padding: 0 15px 0 10px;
@@ -42,7 +42,7 @@ h2::after {
   content: "";
   display: block;
   width: 100%;
-  height: 20px;
+  height: 22px;
   bottom: 6px;
   left: 0;
   z-index: -10;
@@ -116,11 +116,18 @@ ul > li {
 /* Global */
 
 section {
-  padding: 40px 0;
+  padding: 30px 0;
 }
 
 .col-text {
   padding: 0 40px;
+}
+
+.col-v-center {
+  height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navigation */
@@ -148,11 +155,27 @@ section {
   letter-spacing: 2px;
   color: var(--base-color);
   text-decoration: none;
+  position: relative;
 }
 
 .nav a:hover {
   color: var(--base-color);
-  text-decoration: underline;
+}
+
+.nav a::after {
+  background-color: var(--primary-color-light);
+  transition: all .1s linear;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  bottom: 3px;
+  z-index: -10;
+  position: absolute;
+}
+
+.nav a:hover::after {
+  height: 8px;
 }
 
 /* Intro */
@@ -284,6 +307,10 @@ section {
 
 /* Projects */
 
+.project-section {
+  margin-bottom: 40px;
+}
+
 .project-title {
   padding-bottom: 10px;
   font-style: normal;
@@ -298,7 +325,7 @@ section {
   width: 100%;
   background-color: var(--second-color);
   padding: 60px 0 40px;
-  margin-bottom: 20px;
+
 }
 
 .project-img {
@@ -326,7 +353,7 @@ section {
 footer {
   text-align: center;
   background-color: #F1F1F1;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .footer-contact {
