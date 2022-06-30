@@ -49,6 +49,8 @@ h2::after {
   position: absolute;
 }
 
+
+
 h3 {
   font-size: 20px;
   font-weight: 600;
@@ -67,6 +69,14 @@ h4 {
 
 .display::after {
   height: 28px;
+}
+
+@media (max-width: 480px) {
+  .display, h2 {
+    font-size: 48px;
+    text-align: center;
+    display: block;
+  }
 }
 
 p {
@@ -188,8 +198,13 @@ section {
 .intro-section{
   background-color: var(--primary-color);
   color: white;
-  height: calc(100vh - 65px);
   text-align: center;
+}
+
+@media (min-width: 480px) {
+  .intro-section{
+    height: calc(100vh - 65px);
+  }
 }
 
 .subtitle {
@@ -262,6 +277,29 @@ section {
   opacity: 0.5;
   top: 35px;
   right: 35px;
+}
+
+@media (max-width: 480px) {
+  .shadow-one, .shadow-two{
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 100px;
+    top: auto;
+  }
+  .shadow-one {
+    bottom: -60px;
+  }
+  .shadow-two {
+    bottom: -30px;
+  }
+  .profile-img-container{
+    min-height: 0;
+    margin-bottom: 100px;
+  }
+  .profile-img {
+    position: relative;
+  }
 }
 
 .inline-icon {
